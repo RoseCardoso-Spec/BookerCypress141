@@ -31,7 +31,7 @@ Cypress.Commands.add('createToken', () => {
         method: 'POST',
         url: '/auth',
         body: login
-    }).then(({status, body}) => {
+    }).then(({ status, body}) => {
         expect(status).to.eq(200)
         Cypress.env('token', body.token)
     }) // termina cy
